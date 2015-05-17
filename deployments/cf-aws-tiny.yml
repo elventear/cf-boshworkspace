@@ -4,7 +4,8 @@ director_uuid: DIRECTOR_UUID
 
 releases:
   - name: appfirst
-    version: latest
+    version: 111
+    git: https://github.com/appfirst/boshrelease.git  
   - name: cf
     version: 207
     git: https://github.com/cloudfoundry/cf-release.git
