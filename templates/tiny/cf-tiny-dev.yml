@@ -1,6 +1,7 @@
 networks: (( merge ))
 
 meta:
+  appfirst_template: (( merge ))
   haproxy_network: (( merge ))
   environment: ~
 
@@ -239,6 +240,8 @@ jobs:
 
 properties:
   <<: (( merge ))
+
+  appfirst: (( merge ))
 
   template_only:
     aws:
