@@ -1,7 +1,7 @@
 networks: (( merge ))
 
 meta:
-  appfirst_template: (( merge ))
+  appfirst: (( merge ))
   haproxy_network: (( merge ))
   environment: ~
 
@@ -48,14 +48,14 @@ meta:
     release: (( meta.release.name ))
   - name: metron_agent
     release: (( meta.release.name ))
-  - (( meta.appfirst_template ))
+  - (( meta.appfirst.template ))
 
   ha_proxy_templates:
   - name: metron_agent
     release: (( meta.release.name ))
   - name: haproxy
     release: (( meta.release.name ))
-  - (( meta.appfirst_template ))
+  - (( meta.appfirst.template ))
 
   api_templates:
   - name: gorouter
@@ -68,7 +68,7 @@ meta:
     release: (( meta.release.name ))
   - name: consul_agent
     release: (( meta.release.name ))
-  - (( meta.appfirst_template ))
+  - (( meta.appfirst.template ))
 
   services_templates:
   - name: uaa
@@ -83,7 +83,7 @@ meta:
     release: (( meta.release.name ))
   - name: nfs_mounter
     release: (( meta.release.name ))
-  - (( meta.appfirst_template ))
+  - (( meta.appfirst.template ))
 
   dea_templates:
   - name: dea_next
@@ -92,7 +92,7 @@ meta:
     release: (( meta.release.name ))
   - name: metron_agent
     release: (( meta.release.name ))
-  - (( meta.appfirst_template ))
+  - (( meta.appfirst.template ))
 
   health_templates:
   - name: loggregator_trafficcontroller
@@ -107,7 +107,7 @@ meta:
     release: (( meta.release.name ))
   - name: consul_agent
     release: (( meta.release.name ))
-  - (( meta.appfirst_template ))
+  - (( meta.appfirst.template ))
 
 jobs:
   - name: data
@@ -218,7 +218,7 @@ jobs:
     templates:
     - name: acceptance-tests
       release: cf
-    - (( meta.appfirst_template ))
+    - (( meta.appfirst.template ))
     instances: 0
     resource_pool: small_errand
     lifecycle: errand
@@ -229,7 +229,7 @@ jobs:
     templates:
     - name: smoke-tests
       release: cf
-    - (( meta.appfirst_template ))
+    - (( meta.appfirst.template ))
     instances: 0
     resource_pool: small_errand
     lifecycle: errand
@@ -241,7 +241,7 @@ jobs:
 properties:
   <<: (( merge ))
 
-  appfirst: (( merge ))
+  appfirst: (( meta.appfirst.properties ))
 
   template_only:
     aws:
