@@ -43,12 +43,11 @@ templates:
 meta:
   appfirst:
     properties:
-      appfirst: 
-        tenant_id: APPFIRST_TENANT_ID 
-        frontend_url: frontend.appfirst.com
-        backend_url: http://backend.appfirst.com/SaveData.py/save_data
-        server_tags:
-          - cloud_foundry
+      tenant_id: APPFIRST_TENANT_ID 
+      frontend_url: frontend.appfirst.com
+      backend_url: http://backend.appfirst.com/SaveData.py/save_data
+      server_tags:
+        - cloud_foundry
     template:
       name: appfirst
       release: appfirst
