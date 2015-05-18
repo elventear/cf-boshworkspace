@@ -44,8 +44,8 @@ meta:
   appfirst:
     properties:
       tenant_id: APPFIRST_TENANT_ID 
-      frontend_url: frontend.appfirst.com
-      backend_url: http://backend.appfirst.com/SaveData.py/save_data
+      frontend_url: APPFIRST_FRONTEND_URL
+      backend_url: APPFIRST_BACKEND_URL
       server_tags:
         - cloud_foundry
     template:
