@@ -15,8 +15,8 @@ releases:
 
 
 stemcells:
-  - name: bosh-aws-xen-ubuntu-trusty-go_agent
-    version: 30000
+  - name: collector_bosh-aws-xen-ubuntu-trusty-go_agent
+    version: 2941
 
 templates:
   - cf/cf-deployment.yml
